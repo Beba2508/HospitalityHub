@@ -5,39 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hospitality & Coordination Hub</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
-
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/93a76cab6e.js" crossorigin="anonymous"></script>
 
-  <!-- Styles & Script -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="sticky-header">
+  <header class="sticky-header glass">
     <h1>Hospitality & Coordination Hub</h1>
     <p class="subtitle">zora sviće, dan se budi, dobro jutro, dobra butro!</p>
-    <p id="date" class="date"></p>
+    <p class="date" id="todayDate"></p>
   </header>
 
-  <main class="hub-container">
-    <!-- Komunikacija -->
-    <section class="hub-section">
-      <h2>📬 Komunikacija</h2>
-      <div class="card-group">
+  <main>
+    <section class="card-group">
+      <h2><i class="fas fa-comments"></i> Komunikacija</h2>
+      <div class="cards">
         <a href="#" class="card">Gmail</a>
         <a href="#" class="card">WhatsApp Web</a>
         <a href="#" class="card">Nuclino</a>
       </div>
     </section>
 
-    <!-- Upravljanje rezervacijama -->
-    <section class="hub-section">
-      <h2>📅 Upravljanje</h2>
-      <div class="card-group">
+    <section class="card-group">
+      <h2><i class="fas fa-cogs"></i> Upravljanje</h2>
+      <div class="cards">
         <a href="#" class="card">Rentlio</a>
         <a href="#" class="card">Parking</a>
         <a href="#" class="card">Rezervacije Ville</a>
@@ -45,11 +41,10 @@
       </div>
     </section>
 
-    <!-- Tablice -->
-    <section class="hub-section">
-      <h2>📊 Tablice</h2>
-      <div class="card-group">
-        <a href="#" class="card">Dolasci</a>
+    <section class="card-group">
+      <h2><i class="fas fa-table"></i> Tablice</h2>
+      <div class="cards">
+        <a href="#" class="card">Dolazak</a>
         <a href="#" class="card">Podaci</a>
         <a href="#" class="card">Maintenance</a>
         <a href="#" class="card">Nabava</a>
@@ -59,19 +54,17 @@
       </div>
     </section>
 
-    <!-- Plaćanja -->
-    <section class="hub-section">
-      <h2>💳 Plaćanja</h2>
-      <div class="card-group">
+    <section class="card-group">
+      <h2><i class="fas fa-credit-card"></i> Plaćanja</h2>
+      <div class="cards">
         <a href="#" class="card">Teya</a>
         <a href="#" class="card">Saferpay</a>
       </div>
     </section>
 
-    <!-- Extraneti -->
-    <section class="hub-section">
-      <h2>🌐 Extraneti</h2>
-      <div class="card-group">
+    <section class="card-group">
+      <h2><i class="fas fa-globe"></i> Extraneti</h2>
+      <div class="cards">
         <a href="#" class="card">Airbnb</a>
         <a href="#" class="card">Booking</a>
         <a href="#" class="card">Expedia</a>
@@ -81,7 +74,17 @@
   </main>
 
   <footer>
-    <p>Made with ♥ for the team</p>
+    <p>Napravljeno s ljubavlju za najbolji tim ♥ </p>
   </footer>
+
+  <script>
+    const date = new Date().toLocaleDateString("hr-HR", {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+    document.getElementById("todayDate").textContent = date;
+  </script>
 </body>
 </html>
