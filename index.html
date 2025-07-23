@@ -7,7 +7,7 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/93a76cab6e.js" crossorigin="anonymous"></script>
@@ -17,29 +17,38 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="hero">
+  <header class="sticky-header">
     <h1>Hospitality & Coordination Hub</h1>
     <p class="subtitle">zora sviće, dan se budi, dobro jutro, dobra butro!</p>
     <p id="date" class="date"></p>
   </header>
 
-  <main class="main-content">
-    <section>
-      <h2>📱 Web aplikacije</h2>
-      <div class="card-grid">
+  <main class="hub-container">
+    <!-- Komunikacija -->
+    <section class="hub-section">
+      <h2>📬 Komunikacija</h2>
+      <div class="card-group">
         <a href="#" class="card">Gmail</a>
-        <a href="#" class="card">Rentlio</a>
         <a href="#" class="card">WhatsApp Web</a>
         <a href="#" class="card">Nuclino</a>
+      </div>
+    </section>
+
+    <!-- Upravljanje rezervacijama -->
+    <section class="hub-section">
+      <h2>📅 Upravljanje</h2>
+      <div class="card-group">
+        <a href="#" class="card">Rentlio</a>
         <a href="#" class="card">Parking</a>
         <a href="#" class="card">Rezervacije Ville</a>
         <a href="#" class="card">Rasporedi Čišćenja</a>
       </div>
     </section>
 
-    <section>
+    <!-- Tablice -->
+    <section class="hub-section">
       <h2>📊 Tablice</h2>
-      <div class="card-grid">
+      <div class="card-group">
         <a href="#" class="card">Dolasci</a>
         <a href="#" class="card">Podaci</a>
         <a href="#" class="card">Maintenance</a>
@@ -50,27 +59,29 @@
       </div>
     </section>
 
-    <section>
+    <!-- Plaćanja -->
+    <section class="hub-section">
       <h2>💳 Plaćanja</h2>
-      <div class="card-grid">
+      <div class="card-group">
         <a href="#" class="card">Teya</a>
         <a href="#" class="card">Saferpay</a>
       </div>
     </section>
 
-    <section>
-      <h2>🌍 Extraneti</h2>
-      <div class="button-group">
-        <a href="#" class="extranet-btn">Airbnb</a>
-        <a href="#" class="extranet-btn">Booking</a>
-        <a href="#" class="extranet-btn">Expedia</a>
-        <a href="#" class="extranet-btn">Rentlio Booking Engine</a>
+    <!-- Extraneti -->
+    <section class="hub-section">
+      <h2>🌐 Extraneti</h2>
+      <div class="card-group">
+        <a href="#" class="card">Airbnb</a>
+        <a href="#" class="card">Booking</a>
+        <a href="#" class="card">Expedia</a>
+        <a href="#" class="card">Rentlio Booking Engine</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Made with ♥ for the team..</p>
+    <p>Made with ♥ for the team</p>
   </footer>
 </body>
 </html>
