@@ -8,5 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const formattedDate = today.toLocaleDateString("hr-HR", options);
-  document.getElementById("date").textContent = formattedDate;
+  const capitalizedDate = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+  document.getElementById("date").textContent = capitalizedDate;
 });
