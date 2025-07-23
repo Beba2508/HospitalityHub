@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,101 +6,132 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
-  background: linear-gradient(to bottom, #f9d6e6 0%, #ffffff 100%);
-  color: #6a3749; /* tamna roza */
-  line-height: 1.6;
-  padding-top: 120px;
-}
-
-/* Sticky header */
-.sticky-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(145deg, #1f1235, #3b1c48, #a46da0);
+  min-height: 100vh;
+  color: #fceaff;
+  padding: 2rem 1rem;
+  background-attachment: fixed;
   text-align: center;
-  z-index: 1000;
-  padding: 1.5rem 1rem;
-  border-bottom: 1px solid #eed3dd;
+  overflow-x: hidden;
 }
 
-.sticky-header h1 {
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(16px);
+  background: rgba(31, 18, 53, 0.6);
+  padding: 1.2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Title */
+h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: #5d2f42;
-  margin-bottom: 0.2rem;
+  font-size: 2.8rem;
+  color: #ffe6f5;
+  letter-spacing: 1px;
 }
 
 .subtitle {
-  font-size: 1rem;
-  font-weight: 300;
-  color: #7a5062;
   font-style: italic;
+  font-size: 1.1rem;
+  color: #d8b9c3;
+  margin-top: 0.4rem;
 }
 
 .date {
+  margin-top: 0.2rem;
   font-size: 0.9rem;
-  color: #9a7a8c;
-  margin-top: 0.3rem;
+  color: #a58aa2;
 }
 
-/* Main layout */
-.hub-container {
-  max-width: 1100px;
+/* Section Headers */
+h2 {
+  font-size: 1.5rem;
+  margin: 3rem 0 1.2rem;
+  color: #f9d3ec;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+h2::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #f9d3ec;
+  margin: 0 auto 0.4rem;
+}
+
+/* Layout */
+.main-content {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding-bottom: 5rem;
 }
 
-/* Section headers */
-.hub-section {
+/* Cards with glassmorphism */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
-.hub-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  color: #823b5d;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-/* Card layout */
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: flex-start;
-}
-
 .card {
-  flex: 1 1 200px;
-  min-width: 160px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0; /* oštri kutovi */
-  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(255, 192, 230, 0.08);
+  color: #fceaff;
+  padding: 1rem 1.5rem;
+  min-width: 140px;
   text-decoration: none;
-  color: #4a2c3a;
   font-weight: 500;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  transition: all 0.3s ease;
-  text-align: center;
+  border-radius: 0; /* Oštri kutovi */
+  transition: all 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(255, 179, 224, 0.25);
+}
+
+/* Extranet buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.extranet-btn {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffe6f5;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.extranet-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 6px 20px rgba(255, 150, 200, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 2rem;
+  margin-top: 4rem;
   font-size: 0.9rem;
-  color: #aa8fa1;
+  color: #a7869c;
 }
