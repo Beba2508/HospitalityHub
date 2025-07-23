@@ -1,84 +1,103 @@
-/* Font & reset */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
+/* Fonts & Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(160deg, #10051a, #281733, #462143);
+  font-family: 'Urbanist', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
   padding: 2rem;
 }
 
-/* Naslov bez header-bloka */
-.main-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+/* Header */
+.header-container {
   text-align: center;
-  margin-bottom: 0.3rem;
-  color: #f3d2ea;
+  margin-bottom: 3rem;
 }
-
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
 .subtitle {
-  text-align: center;
-  font-style: italic;
-  font-size: 1rem;
-  color: #b49bad;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  color: #ccc;
+  font-size: 0.9rem;
 }
 
-/* Grid Layout (Reflect style) */
-.dashboard {
+/* Grid */
+.widget-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Glassmorphism cards */
-.card {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0.5rem;
+/* Widget Cards */
+.widget {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
 }
-
-.card:hover {
-  transform: scale(1.01);
-}
-
-.card h2 {
-  font-size: 1.2rem;
+.widget h2 {
   margin-bottom: 1rem;
-  color: #ffe0f5;
+  font-weight: 600;
+  color: #fff;
 }
 
-/* Button group */
-.btn-group {
+/* Buttons */
+.button-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
-
 .btn {
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffeefc;
-  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.4rem;
-  backdrop-filter: blur(10px);
-  transition: background 0.2s ease, transform 0.2s ease;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
-.btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
 }
