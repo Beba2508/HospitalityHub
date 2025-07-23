@@ -4,87 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hospitality & Coordination Hub</title>
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/93a76cab6e.js" crossorigin="anonymous"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/93a76cab6e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="sticky-header glass">
+
+  <div class="wrapper">
     <h1>Hospitality & Coordination Hub</h1>
     <p class="subtitle">zora sviće, dan se budi, dobro jutro, dobra butro!</p>
-    <p class="date" id="todayDate"></p>
-  </header>
 
-  <main>
-    <section class="card-group">
+    <div class="card">
       <h2><i class="fas fa-comments"></i> Komunikacija</h2>
-      <div class="cards">
-        <a href="#" class="card">Gmail</a>
-        <a href="#" class="card">WhatsApp Web</a>
-        <a href="#" class="card">Nuclino</a>
+      <div class="buttons">
+        <a href="https://mail.google.com/" target="_blank" class="btn">Gmail</a>
+        <a href="https://web.whatsapp.com/" target="_blank" class="btn">WhatsApp Web</a>
+        <a href="https://nuclino.com/" target="_blank" class="btn">Nuclino</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card-group">
-      <h2><i class="fas fa-cogs"></i> Upravljanje</h2>
-      <div class="cards">
-        <a href="#" class="card">Rentlio</a>
-        <a href="#" class="card">Parking</a>
-        <a href="#" class="card">Rezervacije Ville</a>
-        <a href="#" class="card">Rasporedi Čišćenja</a>
+    <div class="card">
+      <h2><i class="fas fa-sliders-h"></i> Upravljanje</h2>
+      <div class="buttons">
+        <a href="#" class="btn">Rentlio</a>
+        <a href="#" class="btn">Parking</a>
+        <a href="#" class="btn">Rezervacije Ville</a>
+        <a href="#" class="btn">Rasporedi Čišćenja</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card-group">
+    <div class="card">
       <h2><i class="fas fa-table"></i> Tablice</h2>
-      <div class="cards">
-        <a href="#" class="card">Dolazak</a>
-        <a href="#" class="card">Podaci</a>
-        <a href="#" class="card">Maintenance</a>
-        <a href="#" class="card">Nabava</a>
-        <a href="#" class="card">Šifre Beč</a>
-        <a href="#" class="card">Controlling</a>
-        <a href="#" class="card">Plan rada 2025</a>
+      <div class="buttons">
+        <a href="#" class="btn">Dolasci</a>
+        <a href="#" class="btn">Podaci</a>
+        <a href="#" class="btn">Maintenance</a>
+        <a href="#" class="btn">Nabava</a>
+        <a href="#" class="btn">Šifre Beč</a>
+        <a href="#" class="btn">Controlling</a>
+        <a href="#" class="btn">Plan rada 2025</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card-group">
+    <div class="card">
       <h2><i class="fas fa-credit-card"></i> Plaćanja</h2>
-      <div class="cards">
-        <a href="#" class="card">Teya</a>
-        <a href="#" class="card">Saferpay</a>
+      <div class="buttons">
+        <a href="#" class="btn">Teya</a>
+        <a href="#" class="btn">Saferpay</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card-group">
+    <div class="card">
       <h2><i class="fas fa-globe"></i> Extraneti</h2>
-      <div class="cards">
-        <a href="#" class="card">Airbnb</a>
-        <a href="#" class="card">Booking</a>
-        <a href="#" class="card">Expedia</a>
-        <a href="#" class="card">Rentlio Booking Engine</a>
+      <div class="buttons">
+        <a href="#" class="btn">Airbnb</a>
+        <a href="#" class="btn">Booking</a>
+        <a href="#" class="btn">Expedia</a>
+        <a href="#" class="btn">Rentlio Booking Engine</a>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer>
-    <p>Napravljeno s ljubavlju za najbolji tim ♥ </p>
-  </footer>
+    <footer>Made with ♥ for the team</footer>
+  </div>
 
-  <script>
-    const date = new Date().toLocaleDateString("hr-HR", {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    });
-    document.getElementById("todayDate").textContent = date;
-  </script>
 </body>
 </html>
