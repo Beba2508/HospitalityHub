@@ -1,4 +1,4 @@
-/* RESET */
+/* Osnovni reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,132 +6,97 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(145deg, #1f1235, #3b1c48, #a46da0);
+  font-family: 'Segoe UI', 'Poppins', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(160deg, #1d002c, #5b0e49, #ff5fa2);
+  color: #f8f4f8;
   min-height: 100vh;
-  color: #fceaff;
-  padding: 2rem 1rem;
-  background-attachment: fixed;
-  text-align: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   overflow-x: hidden;
 }
 
-/* Sticky Header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(16px);
-  background: rgba(31, 18, 53, 0.6);
-  padding: 1.2rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* Wrapper koji centrira i ograničava širinu */
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-/* Hero Title */
+/* Naslov bez odvojenog headera */
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  color: #ffe6f5;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  margin-top: 1rem;
 }
 
 .subtitle {
+  text-align: center;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #d8b9c3;
-  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #e0cbe2;
+  margin-bottom: 1rem;
 }
 
-.date {
-  margin-top: 0.2rem;
-  font-size: 0.9rem;
-  color: #a58aa2;
-}
-
-/* Section Headers */
-h2 {
-  font-size: 1.5rem;
-  margin: 3rem 0 1.2rem;
-  color: #f9d3ec;
-  font-family: 'Playfair Display', serif;
-  position: relative;
-}
-
-h2::before {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 2px;
-  background: #f9d3ec;
-  margin: 0 auto 0.4rem;
-}
-
-/* Layout */
-.main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-}
-
-/* Cards with glassmorphism */
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
+/* Glassmorphism kartica */
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px rgba(255, 192, 230, 0.08);
-  color: #fceaff;
-  padding: 1rem 1.5rem;
-  min-width: 140px;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 0; /* Oštri kutovi */
-  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(255, 179, 224, 0.25);
+  transform: scale(1.01);
 }
 
-/* Extranet buttons */
-.button-group {
+/* Naslov sekcije unutar kartice */
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ffe5f3;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Gumbi unutar kartica */
+.buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
-.extranet-btn {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffe6f5;
-  padding: 0.8rem 1.8rem;
-  border-radius: 0;
-  font-size: 1rem;
-  text-decoration: none;
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
   font-weight: 500;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(6px);
 }
 
-.extranet-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 6px 20px rgba(255, 150, 200, 0.3);
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
 }
 
 /* Footer */
 footer {
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #a7869c;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 2rem;
+  opacity: 0.6;
 }
