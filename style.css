@@ -1,4 +1,6 @@
-/* Osnovni reset */
+/* Font & reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,51 +8,44 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Poppins', 'Helvetica Neue', sans-serif;
-  background: linear-gradient(160deg, #1d002c, #5b0e49, #ff5fa2);
-  color: #f8f4f8;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(160deg, #10051a, #281733, #462143);
+  color: #fff;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow-x: hidden;
 }
 
-/* Wrapper koji centrira i ograničava širinu */
-.wrapper {
-  max-width: 1000px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-/* Naslov bez odvojenog headera */
-h1 {
+/* Naslov bez header-bloka */
+.main-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  color: #fff;
-  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #f3d2ea;
 }
 
 .subtitle {
   text-align: center;
   font-style: italic;
   font-size: 1rem;
-  color: #e0cbe2;
-  margin-bottom: 1rem;
+  color: #b49bad;
+  margin-bottom: 2rem;
 }
 
-/* Glassmorphism kartica */
+/* Grid Layout (Reflect style) */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Glassmorphism cards */
 .card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.75rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 0 30px rgba(255, 105, 180, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
 
@@ -58,45 +53,32 @@ h1 {
   transform: scale(1.01);
 }
 
-/* Naslov sekcije unutar kartice */
 .card h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #ffe5f3;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: #ffe0f5;
 }
 
-/* Gumbi unutar kartica */
-.buttons {
+/* Button group */
+.btn-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .btn {
-  padding: 0.6rem 1.2rem;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffeefc;
   font-weight: 500;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(6px);
+  border-radius: 0.4rem;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-top: 2rem;
-  opacity: 0.6;
 }
